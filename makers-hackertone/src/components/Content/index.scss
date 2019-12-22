@@ -1,8 +1,10 @@
+@import "../color.scss";
+
 .content-wrap {
     width: 100%;
-    height: calc(100% - 104px);
+    height: calc(100% - 54px);
     display: flex;
-    border-top: 4px solid #706fd3;
+    border-top: 4px solid $tab-color;
 
     .left-content-box {
         width: 60%;

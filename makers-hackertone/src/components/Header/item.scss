@@ -1,10 +1,12 @@
+@import "../color.scss";
+
 .tab-box {
-    height: 100px;
+    height: 50px;
     display: flex;
-    background-color: rgba(#706fd3, 1);
+    background-color: rgba($tab-color, 1);
     border-radius: 6px 6px 0px 0px;
     font-weight: 700;
-    font-size: 34px;
+    font-size: 24px;
 
     a {
         &:link {
@@ -21,7 +23,7 @@
     &.disabled {
         background-color: rgba(#a5b1c2, 0.8);
         font-weight: 500;
-        font-size: 34px;
+        font-size: 20px;
     }
 }
 

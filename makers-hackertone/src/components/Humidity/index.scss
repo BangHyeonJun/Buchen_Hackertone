@@ -1,6 +1,8 @@
+@import "../color.scss";
+
 .humidity-box {
     width: 50%;
     height: 100%;
-    background-color: rgba(#d68010, 0.86);
+    background-color: rgba($temperature-color, 0.86);
     display: flex;
 }

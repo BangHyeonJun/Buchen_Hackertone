@@ -8,11 +8,31 @@ import verry_sad from "../../statics/img/verry_sad.svg";
 
 function Index({ emoType }) {
     const icon = {
-        "1": { icon: verry_happy, name: "매우 좋음", color: "#0054ff" },
-        "2": { icon: happy, name: "좋음", color: "#1ddb16" },
-        "3": { icon: normal, name: "보통", color: "#ff9f1a" },
-        "4": { icon: sad, name: "나쁨", color: "#ff8224" },
-        "5": { icon: verry_sad, name: "매우 나쁨", color: "#ff3838" }
+        "1": {
+            icon: verry_happy,
+            sub: "공기가 매우 좋아요 🕺 밖에 나가서 공기를 마시세요",
+            name: "매우 좋음"
+        },
+        "2": {
+            icon: happy,
+            sub: "공기가 좋아요 🏃‍♂️🙆‍♂️ 나가서 운동하셔도 좋아요",
+            name: "좋음"
+        },
+        "3": {
+            icon: normal,
+            sub: "공기가 나쁘지 않아요 🙍‍♂️ 그래도 마스크는 챙겨주세요",
+            name: "보통"
+        },
+        "4": {
+            icon: sad,
+            sub: "공기가 나빠요 🤦‍♂️ 마스크를 챙겨주세요",
+            name: "나쁨"
+        },
+        "5": {
+            icon: verry_sad,
+            sub: "공기가 매우 나빠요 🙅🏼‍♂️ 외출을 자제해 주세요",
+            name: "매우 나쁨"
+        }
     };
 
     return (
@@ -20,12 +40,11 @@ function Index({ emoType }) {
             <div className="emotion-container">
                 <img className="icon" src={icon[emoType]["icon"]}></img>
             </div>
-            <div
-                className="emotion-title-container"
-                // style={{ color: `rgba(${icon[emoType]["color"]}, 0.8)` }}
-                style={{ color: `${icon[emoType]["color"]}` }}
-            >
-                <span>{icon[emoType]["name"]}</span>
+            <div className="emotion-title-container main">
+                <span className="main-title">{icon[emoType]["name"]}</span>
+            </div>
+            <div className="emotion-title-container sub">
+                <span className="sub-title">{icon[emoType]["sub"]}</span>
             </div>
         </div>
     );
